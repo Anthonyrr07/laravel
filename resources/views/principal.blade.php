@@ -73,7 +73,7 @@
         </div>
         <div class="col-md-4">
           <div class="card">
-            <img src="https://i1.sndcdn.com/artworks-000254519180-au5ijw-t500x500.jpg" class="card-img-top" alt="Gato">
+            <img src="https://lh3.googleusercontent.com/proxy/FL_YyvGJjZ-kvh-WeQ1ylK1kiz9xylqnV5H9phTYTLtPIrmq61607f28699grzZwWoRCZ3nEHAnynGau_FIDSbHYiCNVAEBm7bx0RJdoajwsUJX-B7RcZ-DeeTXJwgMmmoI" class="card-img-top" alt="Gato">
             <div class="card-body">
               <h5 class="card-title">Gato</h5>
               <p class="card-text">Adote um gato e tenha um companheiro independente e carinhoso.</p>
