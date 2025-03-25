@@ -1,45 +1,7 @@
-<!doctype html>
-<html lang="pt-BR">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Login - Adote um Amigo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <style>
-      body {
-        background-color: #f8f9fa;
-        color: #014040;
-      }
-      .navbar {
-        background-color: #014040 !important;
-      }
-      .navbar-brand, .nav-link {
-        color: #f8f9fa !important;
-      }
-      .btn-primary {
-        background-color: #A62F03;
-        border-color: #A62F03;
-      }
-      .btn-primary:hover {
-        background-color: #1B7302;
-        border-color: #1B7302;
-      }
-      .card {
-        border: 1px solid #014040;
-        margin-top: 50px;
-      }
-      .card-title {
-        color: #014040;
-      }
-      .form-label {
-        color: #014040;
-      }
-      .form-control {
-        border-color: #014040;
-      }
-    </style>
-  </head>
-  <body>
+@extends('_partials/body')
+
+
+  @section('conteudo')
     <nav class="navbar navbar-expand-lg navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand" href="#">Adote um Amigo</a>
@@ -92,7 +54,4 @@
         </div>
       </div>
     </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-  </body>
-</html>
+@endsection

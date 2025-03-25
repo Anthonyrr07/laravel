@@ -1,0 +1,36 @@
+body {
+    background-color: #f8f9fa;
+    color: #014040;
+  }
+  .navbar {
+    background-color: #014040 !important;
+  }
+  .navbar-brand, .nav-link {
+    color: #f8f9fa !important;
+  }
+  .btn-primary {
+    background-color: #A62F03;
+    border-color: #A62F03;
+  }
+  .btn-primary:hover {
+    background-color: #1B7302;
+    border-color: #1B7302;
+  }
+  .card {
+    border: 1px solid #014040;
+  }
+  .card-title {
+    color: #014040;
+  }
+  .card-text {
+    color: #1B7302;
+  }
+  .container {
+    margin-top: 50px;
+  }
+  .form-label {
+    color: #014040;
+  }
+  .form-control {
+    border-color: #014040;
+  }
