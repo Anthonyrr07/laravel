@@ -1,0 +1,124 @@
+body {
+    background-color: #14140F;
+    color: #A3CCAB;
+  }
+  .navbar {
+    background-color: #053D38 !important;
+  }
+  .navbar-brand, .nav-link {
+    color: #A3CCAB !important;
+  }
+  .nav-link:hover {
+    color: #F26800 !important;
+  }
+  .btn-primary {
+    background-color: #34675C;
+    border-color: #34675C;
+  }
+  .btn-primary:hover {
+    background-color: #053D38;
+    border-color: #053D38;
+  }
+  .card {
+    background-color: #053D38;
+    color: #A3CCAB;
+    margin-bottom: 20px;
+  }
+  .card-title {
+    color: #F26800;
+  }
+  .footer {
+    background-color: #053D38;
+    color: #A3CCAB;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+  }
+  .register-container {
+    background-color: #053D38;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 50px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .register-container h2 {
+    color: #F26800;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .form-control {
+    background-color: #34675C;
+    border: 1px solid #34675C;
+    color: #A3CCAB;
+  }
+  .form-control:focus {
+    background-color: #34675C;
+    border-color: #F26800;
+    color: #A3CCAB;
+  }
+  .btn-primary {
+    background-color: #F26800;
+    border-color: #F26800;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .btn-primary:hover {
+    background-color: #C65300;
+    border-color: #C65300;
+  }
+  .footer {
+    background-color: #053D38;
+    color: #A3CCAB;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+  .login-container {
+    background-color: #053D38;
+    padding: 30px;
+    border-radius: 10px;
+    margin-top: 100px;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .login-container h2 {
+    color: #F26800;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .form-control {
+    background-color: #34675C;
+    border: 1px solid #34675C;
+    color: #A3CCAB;
+  }
+  .form-control:focus {
+    background-color: #34675C;
+    border-color: #F26800;
+    color: #A3CCAB;
+  }
+  .btn-primary {
+    background-color: #F26800;
+    border-color: #F26800;
+    width: 100%;
+    margin-top: 20px;
+  }
+  .btn-primary:hover {
+    background-color: #C65300;
+    border-color: #C65300;
+  }
+  .footer {
+    background-color: #053D38;
+    color: #A3CCAB;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
