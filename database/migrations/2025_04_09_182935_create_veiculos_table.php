@@ -12,12 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('veiculos', function (Blueprint $table) {
+            $table->id();
             $table->string('nome', 150);
             $table->string('placa', 30);
             $table->date('ano');
         });
     }
-    
+
     public function down(): void
     {
         Schema::dropIfExists('veiculos');
