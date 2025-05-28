@@ -13,7 +13,18 @@ class ClienteController extends Controller
 
     function store(Request $dados){
         $cliente = new ClienteModel();
-        $cliente->create(dados->all());
-        dd($dados->all());
+        $cliente->create($dados->all());
+        
+    }
+
+    function list(){
+        $clientes = ClienteModel::all();
+        return view('list-cliente', ['clientes'=>$clientes]);
+    }
+
+    function remove($id){
+        ClienteModel::destroy($id);
+
+        return redirect()->route('list-cliente');
     }
 }
