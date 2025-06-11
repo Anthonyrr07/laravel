@@ -18,10 +18,10 @@
     <tbody>
             <tr>
                 <td>id: 0</td>
-                <td>Nome: Junim do grau</td>
-                <td>Cpf: 999999999-99</td>
-                <td>Telefone: 99 999999999</td>
-                <td>Email: Junimdograu@gmail.com</td>
+                <td>Nome: Anthony</td>
+                <td>Cpf: 232323</td>
+                <td>Telefone: 232123</td>
+                <td>Email: dnfifdu@gmail.com</td>
                 <td>
 					<a href="/proprietario/remove/0">Excluir</a>
                     <a href="/proprietario/update/0">Atualizar</a>

@@ -15,8 +15,11 @@ class ProprietarioController extends Controller
     function listar(){
         return view('proprietario-listar');
 }
-    function remover(){
-        return view('proprietario-remover');
+    function remove($id){
+   ProprietarioModel::destroy($id);
+
+   return redirect()->route('proprietario-listar');
+    
 }
     function editar(){
         return view('proprietario-editar');

@@ -33,5 +33,5 @@ Route::get('/anuncio/listar', [App\Http\Controllers\AnuncioController::class, 'l
 Route::get('/anuncio/remover', [App\Http\Controllers\AnuncioController::class, 'remover'])->name('anuncio-remover');
 Route::get('/anuncio/editar', [App\Http\Controllers\AnuncioController::class, 'editar'])->name('anuncio-editar');
 
-
-
+Route::get('veiculo/remove/{id}', [App\Http\Controllers\VeiculoController::class, 'remove'])->name('veiculo-remove');
+Route::get('veiculo/editar/{id}', [App\Http\Controllers\VeiculoController::class, 'editar'])->name('veiculo-editar');

@@ -15,8 +15,10 @@ class AnuncioController extends Controller
     function listar(){
         return view('anuncio-listar');
 }
-    function remover(){
-        return view('anuncio-remover');
+    function remove($id){
+    AnuncioModel::destroy($id);
+
+    return redirect()->route('anuncio-listar');
 }
     function editar(){
         return view('anuncio-editar');
