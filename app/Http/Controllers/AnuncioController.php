@@ -24,15 +24,15 @@ class AnuncioController extends Controller
         
         //recupera todos os registros atualizados
         $anuncios = AnuncioModel::all();
-
+        
         //após adicionar ou editar redireciona para a página listar
-        return view('anuncio-listar', ['anuncios'=>$anuncios]);
+        return view('anuncio-listar', ['anuncio'=>$anuncios]);
     }
 
     function listar(){
-        $anuncios = AnuncioModel::all();
+        $anuncio = AnuncioModel::all();
         
-        return view('anuncio-listar', ['anuncios'=>$anuncios]);
+        return view('anuncio-listar', ['anuncio'=>$anuncios]);
     }
 
     function remove($id){
@@ -42,10 +42,9 @@ class AnuncioController extends Controller
     }
     
     function editar($id){
-		$anuncio = AnuncioModel::find($id);
-
+				$anuncio = AnuncioModel::find($id);
 
         return view('anuncio-formulario', ['anuncio' => $anuncio]);
-        //vamos enviar o $veiculo que veio do BD para a página veiculo-formulario
+        //vamos enviar o $anuncio que veio do BD para a página anuncio-formulario
     }
 }

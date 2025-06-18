@@ -34,3 +34,4 @@ Route::get('/anuncio/remove/{id}', [App\Http\Controllers\AnuncioController::clas
 Route::get('/anuncio/editar/{id}', [App\Http\Controllers\AnuncioController::class, 'editar'])->name('anuncio-editar');
 
 
+

@@ -16,15 +16,17 @@
         </tr>
     </thead>
     <tbody>
-            <tr>
-                <td>id: 0</td>
-                <td>Título: Fusca 1975</td>
-                <td>Descrição: Semi-Novo</td>
-                <td>Preço: R$ 100.000</td>
-                <td>Data de Publicação: 04/06/2025</td>
+    @foreach ($anuncios as $anuncio)
+    <tr>
+				<td>{{ $anuncio->id }}</td>
+                <td>{{ $anuncio->titulo }}</td>
+                <td>{{ $anuncio->descricao }}</td>
+                <td>{{ $anuncio->preco }}</td>                
+	            <td>{{ $anuncio->data_publicacao}}</td>                
+                <td>{{ $anuncio->cor }}</td>                
                 <td>
-					<a href="/anuncio/remove/0">Excluir</a>
-                    <a href="/anuncio/update/0">Atualizar</a>
+                    <a href="/anuncio/remove/{{ $anuncio->id }}">Excluir</a>
+                    <a href="{{ route('anuncio-editar', $anuncio->id) }}">Atualizar</a>
                 </td>
             </tr>
         @endforeach
