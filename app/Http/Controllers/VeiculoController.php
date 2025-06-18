@@ -30,7 +30,7 @@ class VeiculoController extends Controller
     
     }
 
-    function list(){
+    function listar(){
         $veiculos = VeiculoModel::all();
         
         return view('veiculo-listar', ['veiculos'=>$veiculos]);
@@ -45,7 +45,7 @@ class VeiculoController extends Controller
     function editar($id){
 				$veiculo = VeiculoModel::find($id);
 
-        return redirect()->route('veiculo-formulario', ['veiculo' => $veiculo]);
+        return view('veiculo-formulario', ['veiculo' => $veiculo]);
         //vamos enviar o $veiculo que veio do BD para a página veiculo-formulario
     }
 }

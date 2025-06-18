@@ -1,7 +1,6 @@
 <form action="{{ route('veiculo-store') }}" method="POST">
     @csrf
 
-    {{-- Essa linha irá recuperar o ID e deixar invisível --}}
     <input type="hidden" name="id" value={{ $veiculo->id ?? old('id') }}>
     
     <label for="marca">Marca</label>
