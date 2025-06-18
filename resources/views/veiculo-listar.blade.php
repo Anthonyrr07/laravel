@@ -19,11 +19,11 @@
     <tbody>
 				@foreach ($veiculos as $veiculo)
             <tr>
-								<td>{{ $veiculo->id }}</td>
+				<td>{{ $veiculo->id }}</td>
                 <td>{{ $veiculo->marca }}</td>
                 <td>{{ $veiculo->modelo }}</td>
                 <td>{{ $veiculo->ano }}</td>                
-	              <td>{{ $veiculo->placa }}</td>                
+	            <td>{{ $veiculo->placa }}</td>                
                 <td>{{ $veiculo->cor }}</td>                
                 <td>
                     <a href="/veiculo/remove/{{ $veiculo->id }}">Excluir</a>

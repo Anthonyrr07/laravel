@@ -29,7 +29,7 @@ class VeiculoController extends Controller
         return view('veiculo-listar', ['veiculos'=>$veiculos]);
     }
 
-    function list(){
+    function listar(){
         $veiculos = VeiculoModel::all();
         
         return view('veiculo-listar', ['veiculos'=>$veiculos]);

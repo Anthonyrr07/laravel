@@ -16,6 +16,7 @@
         </tr>
     </thead>
     <tbody>
+    @foreach ($veiculos as $veiculo)
             <tr>
                 <td>id: 0</td>
                 <td>Nome: Anthony</td>
