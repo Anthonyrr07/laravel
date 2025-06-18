@@ -9,5 +9,7 @@ class AnuncioModel extends Model
 {
     use HasFactory;
     protected $table = 'anuncio';
-    protected $fillable = ['id', 'marca', 'modelo', 'ano', 'placa', 'cor'];
+    protected $fillable = ['id', 'titulo', 'descricao', 'preco', 'data_publicacao'];
+
+    // 'id_proprietario', 'id_veiculo'
 }

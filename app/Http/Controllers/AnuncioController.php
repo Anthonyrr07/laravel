@@ -3,48 +3,49 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\AnuncioModel;
 
 class AnuncioController extends Controller
 {
     function formulario(){
-        return view('veiculo-formulario');
+        return view('anuncio-formulario');
     }
 
     function store(Request $dados){
         if ($dados->id == '') {
             //fazemos ação de create aqui...
-            $veiculo = new VeiculoModel();
-            $veiculo->create($dados->all());
+            $anuncio = new AnuncioModel();
+            $anuncio->create($dados->all());
         } else {
             //fazemos a ação de update aqui
-            $veiculo = VeiculoModel::find($dados->id); //localiza o registro
-            $update = $veiculo->update($dados->all()); //atualiza
+            $anuncio = AnuncioModel::find($dados->id); //localiza o registro
+            $update = $anuncio->update($dados->all()); //atualiza
         }
         
         //recupera todos os registros atualizados
-        $veiculos = VeiculoModel::all();
+        $anuncios = AnuncioModel::all();
 
         //após adicionar ou editar redireciona para a página listar
-        return view('veiculo-listar', ['veiculos'=>$veiculos]);
+        return view('anuncio-listar', ['anuncios'=>$anuncios]);
     }
 
     function listar(){
-        $veiculos = VeiculoModel::all();
+        $anuncios = AnuncioModel::all();
         
-        return view('veiculo-listar', ['veiculos'=>$veiculos]);
+        return view('anuncio-listar', ['anuncios'=>$anuncios]);
     }
 
     function remove($id){
-        VeiculoModel::destroy($id);
+        AnuncioModel::destroy($id);
 
-        return redirect()->route('veiculo-listar');
+        return redirect()->route('anuncio-listar');
     }
     
     function editar($id){
-		$veiculo = VeiculoModel::find($id);
+		$anuncio = AnuncioModel::find($id);
 
 
-        return view('veiculo-formulario', ['veiculo' => $veiculo]);
+        return view('anuncio-formulario', ['anuncio' => $anuncio]);
         //vamos enviar o $veiculo que veio do BD para a página veiculo-formulario
     }
 }
