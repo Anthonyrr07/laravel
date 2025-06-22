@@ -44,13 +44,13 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('proprietario', function(Blueprint $table) {
-            $table->dropForeign('proprietario_id_anuncio_foreign');
-            $table->dropColumn('id_anuncio');
-        });
-
-        Schema::table('anuncio', function(Blueprint $table) {
             $table->dropForeign('anuncio_id_proprietario_foreign');
             $table->dropColumn('id_proprietario');
+        });
+
+        Schema::table('veiculo', function(Blueprint $table) {
+            $table->dropForeign('anuncio_id_veiculo_foreign');
+            $table->dropColumn('id_veiculo');
         });
 
         Schema::dropIfExists('anuncio');
