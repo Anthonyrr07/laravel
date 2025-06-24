@@ -38,7 +38,7 @@ class AnuncioController extends Controller
     function remove($id){
         AnuncioModel::destroy($id);
 
-        return redirect()->route('anuncio-listar');
+        return redirect()->route('anuncio-remove');
     }
     
     function editar($id){
