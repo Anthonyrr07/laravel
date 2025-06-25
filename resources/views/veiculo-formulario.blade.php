@@ -4,7 +4,7 @@
     <input type="hidden" name="id" value={{ $veiculo->id ?? old('id') }}>
     
     <label for="marca">Marca</label>
-    <input type="text" name="marca" id="marca" value={{ $veiculo-> marca ?? old('marca') }}>
+    <input type="text" name="marca" id="marca" value={{ $veiculo->marca ?? old('marca') }}>
 
     <label for="modelo">Modelo</label>
     <input type="text" name="modelo" id="modelo" value={{ $veiculo-> modelo ?? old('modelo') }}>

@@ -19,15 +19,14 @@ class VeiculoController extends Controller
         } else {
             //fazemos a ação de update aqui
             $veiculo = VeiculoModel::find($dados->id); //localiza o registro
-            $update = $veiculo->update($dados->all); //atualiza
+            $update = $veiculo->update($dados->all()); //atualiza
         }
         
         //recupera todos os registros atualizados
         $veiculos = VeiculoModel::all();
-        
+
         //após adicionar ou editar redireciona para a página listar
         return view('veiculo-listar', ['veiculos'=>$veiculos]);
-    
     }
 
     function listar(){
@@ -43,7 +42,8 @@ class VeiculoController extends Controller
     }
     
     function editar($id){
-				$veiculo = VeiculoModel::find($id);
+		$veiculo = VeiculoModel::find($id);
+
 
         return view('veiculo-formulario', ['veiculo' => $veiculo]);
         //vamos enviar o $veiculo que veio do BD para a página veiculo-formulario
