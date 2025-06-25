@@ -13,19 +13,16 @@ class VeiculoController extends Controller
 
     function store(Request $dados){
         if ($dados->id == '') {
-            //fazemos ação de create aqui...
             $veiculo = new VeiculoModel();
             $veiculo->create($dados->all());
         } else {
             //fazemos a ação de update aqui
-            $veiculo = VeiculoModel::find($dados->id); //localiza o registro
-            $update = $veiculo->update($dados->all()); //atualiza
+            $veiculo = VeiculoModel::find($dados->id);
+            $update = $veiculo->update($dados->all());
         }
         
-        //recupera todos os registros atualizados
         $veiculos = VeiculoModel::all();
 
-        //após adicionar ou editar redireciona para a página listar
         return view('veiculo-listar', ['veiculos'=>$veiculos]);
     }
 
@@ -46,6 +43,5 @@ class VeiculoController extends Controller
 
 
         return view('veiculo-formulario', ['veiculo' => $veiculo]);
-        //vamos enviar o $veiculo que veio do BD para a página veiculo-formulario
     }
 }

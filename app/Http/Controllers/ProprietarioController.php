@@ -13,19 +13,15 @@ class ProprietarioController extends Controller
 
     function store(Request $dados){
         if ($dados->id == '') {
-            //fazemos ação de create aqui...
             $proprietario = new ProprietarioModel();
             $proprietario->create($dados->all());
         } else {
-            //fazemos a ação de update aqui
-            $proprietario = ProprietarioModel::find($dados->id); //localiza o registro
-            $update = $proprietario->update($dados->all()); //atualiza
+            $proprietario = ProprietarioModel::find($dados->id);
+            $update = $proprietario->update($dados->all());
         }
         
-        //recupera todos os registros atualizados
         $proprietarios = ProprietarioModel::all();
 
-        //após adicionar ou editar redireciona para a página listar
         return view('proprietario-listar', ['proprietarios'=>$proprietarios]);
     }
 
@@ -46,6 +42,5 @@ class ProprietarioController extends Controller
 
 
         return view('proprietario-formulario', ['proprietario' => $proprietario]);
-        //vamos enviar o $veiculo que veio do BD para a página veiculo-formulario
     }
 }
