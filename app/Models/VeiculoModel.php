@@ -9,5 +9,10 @@ class VeiculoModel extends Model
 {
     use HasFactory;
     protected $table = 'veiculo';
-    protected $fillable = ['id', 'marca', 'modelo', 'ano', 'placa', 'cor'];
+    protected $fillable = ['marca', 'modelo', 'ano', 'placa', 'cor'];
+
+    public function anuncio()
+    {
+        return $this->hasOne(AnuncioModel::class, 'id_veiculo');
+    }
 }
