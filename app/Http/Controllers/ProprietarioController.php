@@ -31,7 +31,7 @@ class ProprietarioController extends Controller
         return view('proprietario-listar', ['proprietarios' => $proprietarios]);
     }
 
-    function list()
+    function listar()
     {
         $proprietarios = ProprietarioModel::all();
 
