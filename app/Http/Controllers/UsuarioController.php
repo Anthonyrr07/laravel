@@ -65,7 +65,6 @@ class UsuarioController extends Controller
 
 function fotoUpload(Request $request)
 {
-    // Verifique se o usuário está autenticado
     $usuario = $request->user();
     
     if (!$usuario) {
@@ -79,7 +78,6 @@ function fotoUpload(Request $request)
     ]);
 
     try {
-        // Verifique se o arquivo foi enviado corretamente
         if (!$request->hasFile('picture')) {
             return response()->json([
                 'message' => 'Nenhuma imagem foi enviada'
@@ -88,7 +86,6 @@ function fotoUpload(Request $request)
 
         $file = $request->file('picture');
         
-        // Verifique se o upload foi bem-sucedido
         if (!$file->isValid()) {
             return response()->json([
                 'message' => 'Arquivo inválido'
@@ -97,7 +94,6 @@ function fotoUpload(Request $request)
 
         $path = $file->store('pictures', 'public');
 
-        // Atualize o usuário
         $usuario->update(['picture' => $path]);
 
         return response()->json([

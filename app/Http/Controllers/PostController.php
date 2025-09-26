@@ -9,9 +9,6 @@ use Illuminate\Support\Facades\Auth;
 
 class PostController extends Controller
 {
-    /**
-     * Listar todas as postagens do usuário logado
-     */
     public function index()
     {
         $user = Auth::user();
@@ -30,9 +27,6 @@ class PostController extends Controller
         return response()->json($posts);
     }
 
-    /**
-     * Criar nova postagem
-     */
     public function store(Request $request)
     {
         $user = Auth::user();
